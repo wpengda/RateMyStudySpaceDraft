@@ -4,71 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.review.ReviewFragment">
+    tools:context=".ui.filter.FilterFragment">
 
 
     <ScrollView
-    android:layout_width="420dp"
-    android:layout_height="638dp"
-    android:layout_marginBottom="93dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="420dp"
+        android:layout_height="638dp"
+        android:layout_marginBottom="93dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/Review_page"
-                android:layout_width="wrap_content"
+            <SearchView
+                android:id="@+id/filter_search"
+                android:layout_width="364dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="4dp"
-                android:text="Review"
-                android:textSize="25sp"/>
-
-            <TextView
-                android:id="@+id/Review_space_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Name"
-                android:textSize="25sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-
-                <TextView
-                    android:id="@+id/Rating"
-                    android:layout_width="70dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="4dp"
-                    android:text="Rating" />
-
-                <RatingBar
-                    android:id="@+id/rating_bar"
-                    style="?android:attr/ratingBarStyleIndicator"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="5"
-                    android:scaleX="1"
-                    android:scaleY="1" />
-            </LinearLayout>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:hint="Type something here..."
-                android:inputType="text" />
-
+                android:iconifiedByDefault="false"
+                android:queryHint="search study space" />
 
             <TextView
                 android:id="@+id/Amenities"
@@ -95,6 +53,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Whiteboards" />
+
+            <TextView
+                android:id="@+id/Rating"
+                android:layout_width="379dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:text="Rating" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:numStars="5"
+                android:scaleX="1"
+                android:scaleY="1" />
 
             <TextView
                 android:id="@+id/Noiselevel"
@@ -129,7 +105,6 @@
                 android:layout_height="wrap_content"
                 android:text="Silent" />
 
-
             <TextView
                 android:id="@+id/Typestudy"
                 android:layout_width="379dp"
@@ -156,15 +131,14 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/submit_review"
+        android:id="@+id/filter_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="50dp"
-        android:text="Submit Review"
+        android:text="Filter"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
