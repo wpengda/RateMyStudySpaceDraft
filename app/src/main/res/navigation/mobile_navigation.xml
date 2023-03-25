@@ -31,6 +31,7 @@
             android:label="@string/title_explore"
             app:destination="@id/spaceOverview" />
     </fragment>
+
     <fragment
         android:id="@+id/spaceOverview"
         android:name="com.example.ratemystudyspace.ui.space.SpaceFragment"
@@ -46,5 +47,17 @@
             app:popUpTo="@+id/navigation_explore"
             app:popUpToInclusive="true"
             app:destination="@id/navigation_favorites"/>
+        <action
+            android:id="@+id/action_spaceOverview_to_navigation_review"
+            app:destination="@id/navigation_review" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_review"
+        android:name="com.example.ratemystudyspace.ui.review.ReviewFragment"
+        android:label="Review"
+        tools:layout="@layout/fragment_review" >
+    </fragment>
+
+
 </navigation>
